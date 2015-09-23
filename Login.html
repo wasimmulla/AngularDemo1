@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="loginApp">
+<head>
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css' />
+    <script src="jquery-1.7.min.js"></script>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+
+    <div class="lg-container" data-ng-controller="loginController">
+        <h1>Login</h1>
+        <form id="lg-form" name="lg-form" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" placeholder="username" data-ng-model="loginDetails.userName" />
+            </div>
+
+            <div>
+                <label>Password:</label>
+                <input type="password" placeholder="password" data-ng-model="loginDetails.userPassword" />
+            </div>
+
+            <div>
+                <button type="submit" id="login" data-ng-click="validateLogin()">Login</button>
+            </div>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <!--<div data-ng-controller="loginController">
+		<label>User name :</label>
+		<input type="text" data-ng-model="userName" />
+
+		<label>Password :</label>
+		<input type="text" data-ng-model="userPassword" />
+
+		<input type="button" value="Login" data-ng-click="validateLogin()" />
+	</div>-->
+</body>
+<script src="login.js"></script>
+</html>
